@@ -1,8 +1,12 @@
+package Abilities;
+
+import Monsters.Monster;
+
 /**
- * Name: RangedAttack.java
+ * Name: Abilities.RangedAttack.java
  * Author:Stacy Kirchner
  * Date: 30 November 2022
- * Description: This class implements Attack
+ * Description: This class implements Abilities.Attack
  */
 
 public class RangedAttack implements Attack {
@@ -10,6 +14,7 @@ public class RangedAttack implements Attack {
     Monster attacker;
 
     public RangedAttack(Monster attacker) {
+
         this.attacker = attacker;
     }
 
@@ -17,6 +22,6 @@ public class RangedAttack implements Attack {
     public Integer attack(Monster target) {
         String message = attacker + " uses a ranged attack on " + target;
         System.out.println(message);
-        return null;
+        return attacker.getAgi() - target.getAgi();
     }
 }

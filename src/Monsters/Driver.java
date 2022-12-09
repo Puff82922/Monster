@@ -1,12 +1,14 @@
+package Monsters;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
 /**
- * Name: Driver.java
+ * Name: Monsters.Driver.java
  * Author:Stacy Kirchner
  * Date: 25 November 2022
- * Description: Driver class with main
+ * Description: Monsters.Driver class with main
  */
 
 public class Driver {
@@ -19,6 +21,11 @@ public class Driver {
 
         for(Monster m : monsters) {
             System.out.println(m);
+        }
+
+        while((monsters.get(0).getHp() > 0 && (monsters.get(1).getHp() > 0))) {
+            System.out.println(monsters.get(0).attackTarget(monsters.get(1)));
+            System.out.println(monsters.get(1).attackTarget(monsters.get(0)));
         }
     }
 }
